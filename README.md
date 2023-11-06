@@ -1,1 +1,2 @@
-# ada-2023-project-randada
+## RandAda project: Movie title semantics
+
