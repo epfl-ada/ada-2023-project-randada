@@ -2,9 +2,11 @@
 
 Team members : Aurèle Baretje, Blanche Kerorgant, Clarisse Pierre, Émilie Monnet, Alice Granboulan.
 
-## Abstract (from Milestone 1 -> to modify)
+## Abstract
 
 A movie title is the first thing we discover about a movie, it is the hook that makes us want to see it. Therefore it needs to be carefully designed.
+
+*A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?*
 
 ## Research questions
 ### Success
@@ -36,6 +38,8 @@ Data cleaning :
 To evaluate the success of a movie.
 Less biased than box office revenues because we can use the average rating which is not (less ?) linked to the number of ratings or the popularity of an actor/director.
 
+*List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant.*
+
 ## Methods
 ### Imputation
 Replace missing data with substituted values to avoid some biases.
@@ -45,7 +49,9 @@ Replace missing data with substituted values to avoid some biases.
 Use natural language processing techniques to extract keywords and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
 Apply sentiment analysis to movie titles to determine the emotional tone conveyed by titles. Explore whether positive or negative sentiment in titles is associated with box office performance.
 
-## Milestones
+*add other methods?*
+
+## Proposed timeline
 ### Until Project milestone 2
 
 |    | Tasks |
@@ -68,6 +74,8 @@ Apply sentiment analysis to movie titles to determine the emotional tone conveye
 |  Teammate  | Contributions |
 | -----| :------- |
 | x | x |
+
+*Organization within the team: A list of internal milestones up until project Milestone P3.*
 
 ## Questions to mentor & TAs
 
