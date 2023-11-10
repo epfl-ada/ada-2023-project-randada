@@ -47,11 +47,15 @@ Data preprocessing :
 For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with **different cofounders** (ratings).
 
 [IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
+
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Average Rating`, `Number of Votes`.
+
 The link between the CMU movie ID with the IMdB movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
+
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Audience Rating`, `Audience Count`, `Tomatometer Rating`, `Tomatometer Count`.
+
 The link between the CMU movie ID with the Rotten tomatoes movie ID is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 ## Methods
