@@ -37,9 +37,12 @@ Analyze how movie titles change when they are translated into different language
 Data cleaning : 
 - remove movies lasting less than one hour ([Wikipedia 'Feature film' definition](https://en.wikipedia.org/wiki/Feature_film)).
 
-### IMdB dataset
-To evaluate the success of a movie.
-Less biased than box office revenues because we can use the average rating which is not (less ?) linked to the number of ratings or the popularity of an actor/director.
+### Additional datasets
+[IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million of movies and series.
+It is less biased than box office revenues because we can use the average rating which is not (less ?) linked to the number of ratings or the popularity of an actor/director.
+The link between the CMU movie ID with the IMDb movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about x matches out of x films in the CMU dataset.
+
+[Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
 
 *List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant.*
 
@@ -76,9 +79,11 @@ Apply sentiment analysis to movie titles to determine the emotional tone conveye
 ## Organization within the team
 |  Teammate  | Contributions |
 | -----| :------- |
-| x | x |
-
-*Organization within the team: A list of internal milestones up until project Milestone P3.*
+| Aurèle | CMU dataset preprocessing. |
+| Émilie | CMU dataset preprocessing. |
+| Clarisse | Choice of NLP tools and libraries. |
+| Blanche | IMdB dataset preprocessing. First visualizations. |
+| Alice | Research questions definition. IMdB dataset preprocessing |
 
 ## Questions to mentor & TAs
 
