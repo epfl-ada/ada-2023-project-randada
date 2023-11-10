@@ -13,7 +13,7 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Research questions
 ### Success
-Does the length of a movie title influence its success?
+Does the length of a movie title influence its success? How to evaluate the cofounders of movie success parameters?
 What is the influence of the employed vocabulary? Should it be sustained or colloquial?
 Does a title need to be explicit about the plot of the movie?
 What is the influence of the presence of the main character name in the title?
@@ -26,7 +26,7 @@ Are they specific lexical fields according to movie genre?
 Does the parameters of title evolve through time?
 
 ### Diversity
-*We will not explore further this idea. Translation of movie titles in English in order to compare them is hard to achieve, and its accuracy is hard to evaluate.*
+*We will not explore this idea further. Translation of movie titles in English in order to compare them is hard to achieve, and its accuracy is hard to evaluate.*
 
 Are there any specific parameters for film titles depending on the country where the film was made? 
 Analyze how movie titles change when they are translated into different languages or adapted for different regions. Do title translations impact the movie's reception?
@@ -37,20 +37,20 @@ Analyze how movie titles change when they are translated into different language
 Data cleaning : 
 - remove movies without title
 - remove movies lasting less than one hour ([Wikipedia 'Feature film' definition](https://en.wikipedia.org/wiki/Feature_film)).
-- remove movies released after 2012, as the CMU database was extracted from Freebase and Wikipedia in 2012.
-- keep only movies in English languages because the semantics analysis will be in English so all titles need to be in English.
+- remove movies released after `2012`, as the CMU database was extracted from Freebase and Wikipedia in 2012.
+- keep only movies with `English language` to get only titles in English because the semantic analysis will be in English.
 
 Data preprocessing :
 - group movies in xx principal genres : xx.
 
 ### Additional datasets
-[IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million of movies and series.
-It is less biased than box office revenues because we can use the average rating which is not (less ?) linked to the number of ratings or the popularity of an actor/director.
-The link between the CMU movie ID with the IMDb movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx films in the CMU dataset.
+For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with **different cofounders**: `ratings`.
+
+[IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
+The link between the CMU movie ID with the IMdB movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
-
-*List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant.*
+Fusion on xx.
 
 ## Methods
 ### Imputation
