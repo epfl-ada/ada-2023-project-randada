@@ -12,6 +12,9 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 
 ## Research questions
+### Time series analysis
+Does the parameters of title (length, lexical fields, abstractness) evolve through time? 
+
 ### Success
 Does the length of a movie title influence its success? How to evaluate the cofounders of movie success parameters?
 What is the influence of the employed vocabulary? Should it be sustained or colloquial?
@@ -21,14 +24,12 @@ What is the influence of the presence of the main character name in the title?
 ### Movie genre
 Is movie title length linked to its genre?
 Are they specific lexical fields according to movie genre?
-
-### Time series analysis
-Does the parameters of title evolve through time?
+Can we correlate the sentiment analysis of the title with the one of the full movie summary?
 
 ### Diversity
 *We will not explore this idea further. Translation of movie titles in English in order to compare them is hard to achieve, and its accuracy is hard to evaluate.*
 
-Are there any specific parameters for film titles depending on the country where the film was made? 
+Are there any specific parameters for film titles depending on the country where the film was made?
 Analyze how movie titles change when they are translated into different languages or adapted for different regions. Do title translations impact the movie's reception?
 
 
@@ -37,39 +38,41 @@ Analyze how movie titles change when they are translated into different language
 Data cleaning : 
 - remove movies without title
 - remove movies lasting less than one hour ([Wikipedia 'Feature film' definition](https://en.wikipedia.org/wiki/Feature_film)).
-- remove movies released after `2012`, as the CMU database was extracted from Freebase and Wikipedia in 2012.
-- keep only movies with `English language` to get only titles in English because the semantic analysis will be in English.
+- remove movies released after 2012, as the CMU database was extracted from Freebase and Wikipedia in 2012.
+- keep only movies with English language to get only titles in English because the semantic analysis will be in English.
+
 
 Data preprocessing :
 - group movies in xx principal genres : xx.
 
 ### Additional datasets
-For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with **different cofounders** (ratings).
+
+For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with different cofounders (ratings).
 
 [IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
-
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Average Rating`, `Number of Votes`.
 
-The link between the CMU movie ID with the IMdB movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
+The link between the CMU movie ID with the IMDb movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
-
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Audience Rating`, `Audience Count`, `Tomatometer Rating`, `Tomatometer Count`.
 
 The link between the CMU movie ID with the Rotten tomatoes movie ID is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 ## Methods
 ### NLP analysis
-Use natural language processing techniques to extract keywords and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
-Apply **sentiment analysis** to movie titles to determine the emotional tone conveyed by titles. Explore whether positive or negative sentiment in titles is associated with box office performance.
+Use natural language processing techniques to extract keywords, entities (NER) and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
 
-*add other methods after first visualizations*
+Apply sentiment analysis to movie titles to determine the emotional tone conveyed by titles. Explore whether positive or negative sentiment in titles is associated with box office performance.
+
+### Machine Learning
+Use Machine Learning to predict the movie genres using its title (for titles with more than 2 words). 
+
 
 ## Proposed timeline
 ### Until Project milestone 2
 
 |    | Tasks |
-| -----| :------- |
 | Week 1 (30.10-05.11)  | <ul><li>Precise definition of the research questions.</li><li>Data scraping, pre-processing and dataset construction.</li></ul> |
 | Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
 | Week 3 (13.11-17.11)  | First clustering and first visualizations.  |
