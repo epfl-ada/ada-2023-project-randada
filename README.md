@@ -71,7 +71,7 @@ Apply sentiment analysis to movie titles to determine the emotional tone conveye
 |    | Tasks |
 | -----| :------- |
 | Week 4 (20.11-26.11)  | Classifying movies into sentiments from their title and from their plot using NLP. |
-| Week 5 (27.11-03.12)  | Clustering and visualizations. |
+| Week 5 (27.11-03.12)  | <ul><li>Clustering and visualizations.</li><li>Brainstorm for the datastory.</li></ul> |
 | Week 6 (04.12-10.12)  | Detailed analysis for each research question. Finalization of the graphs. |
 | Week 7 (11.12-17.12)  | Design the data story website. |
 | Week 8 (18.12-22.12)  | Stick all the pieces together |
