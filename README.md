@@ -73,6 +73,7 @@ Use Machine Learning to predict the movie genres using its title (for titles wit
 ### Until Project milestone 2
 
 |    | Tasks |
+| -----| :------- |
 | Week 1 (30.10-05.11)  | <ul><li>Precise definition of the research questions.</li><li>Data scraping, pre-processing and dataset construction.</li></ul> |
 | Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
 | Week 3 (13.11-17.11)  | First clustering and first visualizations.  |
