@@ -61,11 +61,10 @@ The link between the pre-processed CMU and Rotten tomatoes datasets is made usin
 #### Financial
 For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
 
-[Budget](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) : import the `Budget` parameter as it is not present in the CMU dataset parameters. Budget info is used to calculate movie profit, which can be useful to analyse the movie success. This dataset was collected from TMDB and GroupLens.
+[Budget](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) : import the `Budget` parameter as it is not present in the CMU dataset parameters. Budget info is used to calculate movie profit, which can be useful to analyse the movie success. This dataset was collected from TMDB and GroupLens.  The link between the pre-processed CMU and xx datasets is made using 2 matching criteria: `Movie Name` and `Movie Release Date`. This brings us to about 2966 matches out of 779 movies in the CMU dataset.
 
 [CPI](https://stats.oecd.org/index.aspx?DataSetCode=PRICES_CPI#) : Consumer Price Indexes (CPI) were used to adjust movie box office revenues and film budgets for inflation rates spanning from 1913 to 2012. This dataset was sourced from OECD.stat.
 
-TO MODIFY : The link between the pre-processed CMU and xx datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 #### Actor's fame
 [Top100 actors](https://m.imdb.com/list/ls058011111/) To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
