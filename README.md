@@ -69,6 +69,9 @@ For the success analysis, we also want to investigate the financial success of a
 
 TO MODIFY : The link between the pre-processed CMU and xx datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
+#### Actor's fame
+xx
+
 ## Methods
 ### NLP analysis
 Use natural language processing techniques to extract keywords, entities (NER) and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
@@ -105,4 +108,4 @@ Use Machine Learning to predict the movie genres using its title (for titles wit
 | Émilie | CMU dataset preprocessing. |
 | Clarisse | Choice of NLP tools and libraries. NLP first sentiment analysis visualizations. |
 | Blanche | Financial success dataset preprocessing. Financial success & cofounders first visualizations. |
-| Alice | Research questions definition. Rating datasets preprocessing. Success & genre first visualizations. |
+| Alice | Research questions. Rating datasets preprocessing. Success & genre first visualizations. |
