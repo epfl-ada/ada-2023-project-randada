@@ -47,24 +47,27 @@ Data preprocessing :
 - add the list of characters for each movie from the CMU character metadata dataset.
 
 ### Additional datasets
-
+#### Ratings
 For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with different cofounders (ratings).
 
 [IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Average Rating`, `Number of Votes`.
 
-The link between the CMU movie ID with the IMDb movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
+The link between the pre-processed CMU and IMDb datasets is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about 13'825 matches out of 26'772 movies in the CMU dataset.
 
 [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Audience Rating`, `Audience Count`, `Tomatometer Rating`, `Tomatometer Count`.
 
-The link between the CMU movie ID with the Rotten tomatoes movie ID is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
+The link between the pre-processed CMU and Rotten tomatoes datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about 2'549 matches out of 26'772 movies in the CMU dataset.
 
+#### Financial
 For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
 
 [Budget]() : import the `Budget` parameter as is not one of the CMU dataset parameters. Budget is essential to reduce the risk of confounders when analyzing the relationship between title features and the box office revenue.
 
 [CPI]() : to adjust budget and box office revenue of the movies, with inflation data - the Consumer Price Index (CPI) of the OCDE. 
+
+TO MODIFY : The link between the pre-processed CMU and xx datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 ## Methods
 ### NLP analysis
