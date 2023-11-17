@@ -43,7 +43,8 @@ Data cleaning :
 
 
 Data preprocessing :
-- group movies in xx principal genres : xx.
+- group movies in 19 principal genres.
+- add the list of characters for each movie from the CMU character metadata dataset.
 
 ### Additional datasets
 
@@ -58,6 +59,13 @@ The link between the CMU movie ID with the IMDb movie ID is made using 3 matchin
 Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Audience Rating`, `Audience Count`, `Tomatometer Rating`, `Tomatometer Count`.
 
 The link between the CMU movie ID with the Rotten tomatoes movie ID is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
+
+For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
+By adjusting for inflation, we can measure financial success in constant dollars, which allows us to compare movies from different years
+Additional datasets provide other success parameters with different cofounders (ratings).
+[Budget]() : import the `Budget` parameter as is not one of the CMU dataset parameters. Budget is essential to reduce the risk of confounders when analyzing the relationship between title features and the box office revenue.
+
+[CPI]() : to adjust budget and box office revenue of the movies, with inflation data - the Consumer Price Index (CPI) of the OCDE. 
 
 ## Methods
 ### NLP analysis
@@ -75,7 +83,7 @@ Use Machine Learning to predict the movie genres using its title (for titles wit
 |    | Tasks |
 | -----| :------- |
 | Week 1 (30.10-05.11)  | <ul><li>Precise definition of the research questions.</li><li>Data scraping, pre-processing and dataset construction.</li></ul> |
-| Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
+| Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset. Process of datasets linked financial success.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
 | Week 3 (13.11-17.11)  | First clustering and first visualizations.  |
 
 ### Until Project milestone 3
@@ -89,13 +97,10 @@ Use Machine Learning to predict the movie genres using its title (for titles wit
 | Week 8 (18.12-22.12)  | Stick all the pieces together |
 
 ## Organization within the team
-|  Teammate  | Contributions |
+|  Teammate  | Contributions (until week 3) |
 | -----| :------- |
 | Aurèle | CMU dataset preprocessing. |
 | Émilie | CMU dataset preprocessing. |
-| Clarisse | Choice of NLP tools and libraries. |
-| Blanche | IMdB dataset preprocessing. First visualizations. |
-| Alice | Research questions definition. IMdB dataset preprocessing |
-
-## Questions to mentor & TAs
-
+| Clarisse | Choice of NLP tools and libraries. NLP first sentiment analysis visualizations. |
+| Blanche | Financial success dataset preprocessing. Financial success & cofounders first visualizations. |
+| Alice | Research questions definition. Rating datasets preprocessing. Success & genre first visualizations. |
