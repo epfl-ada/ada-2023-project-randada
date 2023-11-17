@@ -51,14 +51,18 @@ Data preprocessing :
 For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with different cofounders (ratings).
 
 [IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
-Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Average Rating`, `Number of Votes`.
 
 The link between the pre-processed CMU and IMDb datasets is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about 13'825 matches out of 26'772 movies in the CMU dataset.
 
 [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
-Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Audience Rating`, `Audience Count`, `Tomatometer Rating`, `Tomatometer Count`.
 
 The link between the pre-processed CMU and Rotten tomatoes datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about 2'549 matches out of 26'772 movies in the CMU dataset.
+
+To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
+
+Additionally, a dataset containing information on movie budgets was extracted from The Movie DataBase (TMDB).
+
+We used a dataset featuring Consumer Price Indexes (CPI) to adjust movie box office revenues and film budgets for inflation rates spanning from 1913 to 2012. This dataset was sourced from OECD.stat.
 
 #### Financial
 For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
