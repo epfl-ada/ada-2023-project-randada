@@ -58,23 +58,17 @@ The link between the pre-processed CMU and IMDb datasets is made using 3 matchin
 
 The link between the pre-processed CMU and Rotten tomatoes datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about 2'549 matches out of 26'772 movies in the CMU dataset.
 
-To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
-
-Additionally, a dataset containing information on movie budgets was extracted from The Movie DataBase (TMDB).
-
-We used a dataset featuring Consumer Price Indexes (CPI) to adjust movie box office revenues and film budgets for inflation rates spanning from 1913 to 2012. This dataset was sourced from OECD.stat.
-
 #### Financial
 For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
 
-[Budget]() : import the `Budget` parameter as is not one of the CMU dataset parameters. Budget is essential to reduce the risk of confounders when analyzing the relationship between title features and the box office revenue.
+[Budget](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) : import the `Budget` parameter as it is not present in the CMU dataset parameters. Budget info is used to calculate movie profit, which can be useful to analyse the movie success. This dataset was collected from TMDB and GroupLens.
 
-[CPI]() : to adjust budget and box office revenue of the movies, with inflation data - the Consumer Price Index (CPI) of the OCDE. 
+[CPI](https://stats.oecd.org/index.aspx?DataSetCode=PRICES_CPI#) : Consumer Price Indexes (CPI) were used to adjust movie box office revenues and film budgets for inflation rates spanning from 1913 to 2012. This dataset was sourced from OECD.stat.
 
 TO MODIFY : The link between the pre-processed CMU and xx datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
 
 #### Actor's fame
-xx
+[Top100 actors](https://m.imdb.com/list/ls058011111/) To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
 
 ## Methods
 ### NLP analysis
