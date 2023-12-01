@@ -1,4 +1,4 @@
-# RandAda project: Movie title semantics
+# Title to success
 
 Team members : Aurèle Baretje, Blanche Kerorgant, Clarisse Pierre, Émilie Monnet, Alice Granboulan.
 
@@ -8,7 +8,7 @@ How is a movie title designed? A movie title is the first thing we discover abou
 
 While a compelling title doesn't guarantee the success of your movie, it plays a crucial role in attracting the attention of the public. An intriguing title serves as a gateway to getting your film noticed, establishing an initial link with the audience who will be more inclined to go to the cinema to see it.
 
-We plan to analyze if a movie title can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the hero's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
+We plan to analyze if a movie title can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the protagonist's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
 
 
 ## Research questions
@@ -17,7 +17,7 @@ Does the parameters of title (length, lexical fields, abstractness) evolve throu
 
 ### Success
 Does the length of a movie title influence its success? How to evaluate the cofounders of movie success parameters?
-What is the influence of the employed vocabulary? Should it be sustained or colloquial?
+What is the influence of the employed vocabulary? Should it be formal or colloquial?
 Does a title need to be explicit about the plot of the movie?
 What is the influence of the presence of the main character name in the title?
 
@@ -25,13 +25,6 @@ What is the influence of the presence of the main character name in the title?
 Is movie title length linked to its genre?
 Are they specific lexical fields according to movie genre?
 Can we correlate the sentiment analysis of the title with the one of the full movie summary?
-
-### Diversity
-*We will not explore this idea further. Translation of movie titles in English in order to compare them is hard to achieve, and its accuracy is hard to evaluate.*
-
-Are there any specific parameters for film titles depending on the country where the film was made?
-Analyze how movie titles change when they are translated into different languages or adapted for different regions. Do title translations impact the movie's reception?
-
 
 ## Datasets
 ### CMU Movie Summary Corpus dataset
