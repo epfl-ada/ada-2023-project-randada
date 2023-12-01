@@ -1,4 +1,4 @@
-# RandAda project: Movie title semantics
+# Title to success
 
 Team members : Aurèle Baretje, Blanche Kerorgant, Clarisse Pierre, Émilie Monnet, Alice Granboulan.
 
@@ -8,7 +8,7 @@ How is a movie title designed? A movie title is the first thing we discover abou
 
 While a compelling title doesn't guarantee the success of your movie, it plays a crucial role in attracting the attention of the public. An intriguing title serves as a gateway to getting your film noticed, establishing an initial link with the audience who will be more inclined to go to the cinema to see it.
 
-We plan to analyze if a movie title can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the hero's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
+We plan to analyze if a movie title can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the protagonist's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
 
 
 ## Research questions
@@ -17,7 +17,7 @@ Does the parameters of title (length, lexical fields, abstractness) evolve throu
 
 ### Success
 Does the length of a movie title influence its success? How to evaluate the cofounders of movie success parameters?
-What is the influence of the employed vocabulary? Should it be sustained or colloquial?
+What is the influence of the employed vocabulary? Should it be formal or colloquial?
 Does a title need to be explicit about the plot of the movie?
 What is the influence of the presence of the main character name in the title?
 
@@ -25,13 +25,6 @@ What is the influence of the presence of the main character name in the title?
 Is movie title length linked to its genre?
 Are they specific lexical fields according to movie genre?
 Can we correlate the sentiment analysis of the title with the one of the full movie summary?
-
-### Diversity
-*We will not explore this idea further. Translation of movie titles in English in order to compare them is hard to achieve, and its accuracy is hard to evaluate.*
-
-Are there any specific parameters for film titles depending on the country where the film was made?
-Analyze how movie titles change when they are translated into different languages or adapted for different regions. Do title translations impact the movie's reception?
-
 
 ## Datasets
 ### CMU Movie Summary Corpus dataset
@@ -43,21 +36,33 @@ Data cleaning :
 
 
 Data preprocessing :
-- group movies in xx principal genres : xx.
+- group movies in 19 principal genres.
+- add the list of characters for each movie from the CMU character metadata dataset.
 
 ### Additional datasets
-
+#### Ratings
 For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with different cofounders (ratings).
 
 [IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
-Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Average Rating`, `Number of Votes`.
 
-The link between the CMU movie ID with the IMDb movie ID is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
+The link between the pre-processed CMU and IMDb datasets is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about 13'825 matches out of 26'772 movies in the CMU dataset.
 
 [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
-Columns of interest: `Movie Name`, `Movie Release Date`, `Movie Runtime`, `Director`, `Production Company`, `Audience Rating`, `Audience Count`, `Tomatometer Rating`, `Tomatometer Count`.
 
-The link between the CMU movie ID with the Rotten tomatoes movie ID is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about xx matches out of xx movies in the CMU dataset.
+The link between the pre-processed CMU and Rotten tomatoes datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about 2'549 matches out of 26'772 movies in the CMU dataset.
+
+#### Financial
+For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
+
+[Budget](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) : import the `Budget` parameter as it is not present in the CMU dataset parameters. Budget info is used to calculate movie profit, which can be useful to analyse the movie success. This dataset was collected from TMDB and GroupLens.  
+
+The link between the pre-processed CMU and xx datasets is made using 2 matching criteria: `Movie Name` and `Movie Release Date`. This brings us to about 779 matches out of 2'966 movies in the CMU-IMdB dataset (processed to keep only movies with box office data).
+
+[CPI](https://stats.oecd.org/index.aspx?DataSetCode=PRICES_CPI#) : Consumer Price Indexes (CPI) were used to adjust movie box office revenues and film budgets for inflation rates spanning from 1913 to 2012. This dataset was sourced from OECD.stat.
+
+
+#### Actor's fame
+[Top100 actors](https://m.imdb.com/list/ls058011111/) To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
 
 ## Methods
 ### NLP analysis
@@ -75,7 +80,7 @@ Use Machine Learning to predict the movie genres using its title (for titles wit
 |    | Tasks |
 | -----| :------- |
 | Week 1 (30.10-05.11)  | <ul><li>Precise definition of the research questions.</li><li>Data scraping, pre-processing and dataset construction.</li></ul> |
-| Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
+| Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset. Process of datasets linked financial success.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
 | Week 3 (13.11-17.11)  | First clustering and first visualizations.  |
 
 ### Until Project milestone 3
@@ -89,13 +94,10 @@ Use Machine Learning to predict the movie genres using its title (for titles wit
 | Week 8 (18.12-22.12)  | Stick all the pieces together |
 
 ## Organization within the team
-|  Teammate  | Contributions |
+|  Teammate  | Contributions (until week 3) |
 | -----| :------- |
 | Aurèle | CMU dataset preprocessing. |
 | Émilie | CMU dataset preprocessing. |
-| Clarisse | Choice of NLP tools and libraries. |
-| Blanche | IMdB dataset preprocessing. First visualizations. |
-| Alice | Research questions definition. IMdB dataset preprocessing |
-
-## Questions to mentor & TAs
-
+| Clarisse | Choice of NLP tools and libraries. NLP first sentiment analysis visualizations. |
+| Blanche | Financial success dataset preprocessing. Financial success & cofounders first visualizations. |
+| Alice | Research questions. Rating datasets preprocessing. Success & genre first visualizations. |
