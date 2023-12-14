@@ -5,6 +5,8 @@ Team members : Aurèle Baretje, Blanche Kerorgant, Clarisse Pierre, Émilie Monn
 
 Datastory : https://blanchek.github.io/MovieTitles/movies-titles/
 
+Website github : https://github.com/BlancheK/MovieTitles
+
 ## Abstract
 
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
