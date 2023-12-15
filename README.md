@@ -21,10 +21,10 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 Does the parameters of title (length, lexical fields, abstractness) evolve through time? 
 
 ### Success
-Does the length of a movie title influence its success? How to evaluate the cofounders of movie success parameters?
-What is the influence of the employed vocabulary? Should it be formal or colloquial?
-Does a title need to be explicit about the plot of the movie?
-What is the influence of the presence of the main character name in the title?
+Does the length of a movie title influence its success? How to evaluate the confounders of movie success parameters?
+What is the influence of the employed vocabulary? Should it contain verbs or nouns?
+Should a title convey a positive or negative sentiment?
+What is the influence of the presence of a protagonist name in the title?
 
 ### Movie genre
 Is movie title length linked to its genre?
@@ -46,15 +46,11 @@ Data preprocessing :
 
 ### Additional datasets
 #### Ratings
-For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). Additional datasets provide other success parameters with different cofounders (ratings).
+For the success analysis, using the `Box office revenues` parameter introduces a bias (because it is impacted by actor popularity for example). The IMdB dataset provides an other success parameter with different confounders (ratings).
 
 [IMdB](https://developer.imdb.com/non-commercial-datasets/) : to evaluate the success of a movie based on **IMDb average rating** and **number of votes** for more than a million movies and series.
 
 The link between the pre-processed CMU and IMDb datasets is made using 3 matching criteria: `Movie Name`, `Movie Release Date` and `Movie Runtime`. This brings us to about 13'825 matches out of 26'772 movies in the CMU dataset.
-
-[Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) : to evaluate the success of a movie based on **regular users ratings** (audience score) and **critics ratings** (tomatoscore).
-
-The link between the pre-processed CMU and Rotten tomatoes datasets is made using 3 matching criteria: `Movie Name`  `Movie Release Date` and `Movie Runtime`. This brings us to about 2'549 matches out of 26'772 movies in the CMU dataset.
 
 #### Financial
 For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
@@ -69,40 +65,43 @@ The link between the pre-processed CMU and xx datasets is made using 2 matching 
 #### Actor's fame
 [Top100 actors](https://m.imdb.com/list/ls058011111/) To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
 
+#### Director's fame
+=> Blanche
+
+#### Studio's fame
+=> Blanche
+
 ## Methods
 ### NLP analysis
 Use natural language processing techniques to extract keywords, entities (NER) and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
 
 Apply sentiment analysis to movie titles to determine the emotional tone conveyed by titles. Explore whether positive or negative sentiment in titles is associated with box office performance.
 
+Genre lexical fields => Clarisse
+
 ### Machine Learning
 Use Machine Learning to predict the movie genres using its title (for titles with more than 2 words). 
 
+Random forest => Aurèle
 
-## Proposed timeline
-### Until Project milestone 2
+## Project timeline
 
 |    | Tasks |
 | -----| :------- |
 | Week 1 (30.10-05.11)  | <ul><li>Precise definition of the research questions.</li><li>Data scraping, pre-processing and dataset construction.</li></ul> |
 | Week 2 (06.11-12.11)  | <ul><li>Creation of a ratings dataframe: merging the CMU dataset with IMdB dataset and/ot Rotten tomatoes dataset. Process of datasets linked financial success.</li><li>Getting familiar with NLP libraries.</li><li>Data crawling if important information is missing.</li></ul> |
 | Week 3 (13.11-17.11)  | First clustering and first visualizations.  |
-
-### Until Project milestone 3
-
-|    | Tasks |
-| -----| :------- |
-| Week 4 (20.11-26.11)  | Classifying movies into sentiments from their title and from their plot using NLP. |
-| Week 5 (27.11-03.12)  | <ul><li>Clustering and visualizations.</li><li>Brainstorm for the datastory.</li></ul> |
+| Week 4 (20.11-26.11)  | <ul><li>Classifying movies into sentiments from their title and from their summary using NLP.</li><li>Additional datasets for confonders.</li></ul> |
+| Week 5 (27.11-03.12)  | <ul><li>Brainstorm for the datastory.</li><li>Extraction of lexical fields and movie genre prediction.</li></ul> |
 | Week 6 (04.12-10.12)  | Detailed analysis for each research question. Finalization of the graphs. |
-| Week 7 (11.12-17.12)  | Design the data story website. |
+| Week 7 (11.12-17.12)  | <ul><li>Design the data story website.</li><li>Success prediction tool based on title using random forest.</li></ul> |
 | Week 8 (18.12-22.12)  | Stick all the pieces together |
 
 ## Organization within the team
 |  Teammate  | Contributions (until week 3) |
 | -----| :------- |
-| Aurèle | CMU dataset preprocessing. |
-| Émilie | CMU dataset preprocessing. |
-| Clarisse | Choice of NLP tools and libraries. NLP first sentiment analysis visualizations. |
-| Blanche | Financial success dataset preprocessing. Financial success & cofounders first visualizations. |
-| Alice | Research questions. Rating datasets preprocessing. Success & genre first visualizations. |
+| Aurèle | <ul><li>CMU dataset preprocessing.</li><li>Confounders visualization</li><li>Prediction tool design.</li></ul> |
+| Émilie | <ul><li>CMU dataset preprocessing.</li><li>Confounders visualizations & correlation analysis (statistical tests).</li><li>Final text for the data story.</li></ul> |
+| Clarisse | <ul><li>Choice of NLP tools and libraries.</li><li>NLP sentiment and vocabulary analyses for title key features.</li><li>Genre prediction based on created lexical fields.</li></ul> |
+| Blanche | <ul><li>Confounders datasets preprocessing.</li><li>Confounders visualizations.</li><li>Genre prediction based on created lexical fields.</li></ul> |
+| Alice | <ul><li>Research questions. Rating datasets preprocessing.</li><li>Time series analysis of title key features.</li><li>Website design & creation interactive graphs.</li></ul> |
