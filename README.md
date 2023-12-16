@@ -66,10 +66,10 @@ The link between the pre-processed CMU and xx datasets is made using 2 matching 
 [Most famous actors of all times](https://m.imdb.com/list/ls058011111/)  We select a list of the 100 most famous actors, tu disciminate movies with famous or not famous actors.
 
 #### Director's fame
-[Most famous directors of all times](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/)  We select a list of the top 50 influential directors, to discriminate movies directed by famous or not famous directors.
+[Most famous directors of all times](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/)  We select a list of the 50 most influential directors, to discriminate movies directed by famous or not famous directors.
 
 #### Studio's fame
-[Most important movie prodcution compagnies of all times](https://en.wikipedia.org/wiki/Major_film_studios#:~:text=Today%2C%20the%20Big%20Five%20majors,to%20afford%20to%20watch%20films) A list of famous movie studios was designed to discrimate movies produced by famous or not famous studios. The information of the studio production of each movie was found on the [additionnal dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset).
+[Most important movie production compagnies of all times](https://en.wikipedia.org/wiki/Major_film_studios#:~:text=Today%2C%20the%20Big%20Five%20majors,to%20afford%20to%20watch%20films) A list of famous movie studios was designed to discrimate movies produced by famous or not famous studios. The information of the studio production of each movie was found on the [additionnal dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset).
 
 ## Methods
 ### NLP analysis
