@@ -55,21 +55,21 @@ The link between the pre-processed CMU and IMDb datasets is made using 3 matchin
 #### Financial
 For the success analysis, we also want to investigate the financial success of a movie. The `Box office revenues` and `Budget` parameters will be used to do so. 
 
-[Budget](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) : import the `Budget` parameter as it is not present in the CMU dataset parameters. Budget info is used to calculate movie profit, which can be useful to analyse the movie success. This dataset was collected from TMDB and GroupLens.  
+[Budget](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) : import the `Budget` parameter as it is not present in the CMU dataset parameters. Budget info is used to calculate movie profit, which can be useful to analyse the movie success. This dataset was collected from Full MovieLens.  
 
-The link between the pre-processed CMU and xx datasets is made using 2 matching criteria: `Movie Name` and `Movie Release Date`. This brings us to about 779 matches out of 2'966 movies in the CMU-IMdB dataset (processed to keep only movies with box office data).
+The link between the pre-processed CMU and Full MovieLens datasets is made using 2 matching criteria: `Movie Name` and `Movie Release Date`. This brings us to about 779 matches out of 2'966 movies in the CMU-IMdB dataset (processed to keep only movies with box office data).
 
 [CPI](https://stats.oecd.org/index.aspx?DataSetCode=PRICES_CPI#) : Consumer Price Indexes (CPI) were used to adjust movie box office revenues and film budgets for inflation rates spanning from 1913 to 2012. This dataset was sourced from OECD.stat.
 
 
 #### Actor's fame
-[Top100 actors](https://m.imdb.com/list/ls058011111/) To identify the 100 most famous actors of all time, a list was compiled from IMdB : top100 actors of all time.
+[Most famous actors of all times](https://m.imdb.com/list/ls058011111/)  We select a list of the 100 most famous actors, tu disciminate movies with famous or not famous actors.
 
 #### Director's fame
-=> Blanche
+[Most famous directors of all times](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/)  We select a list of the 50 most influential directors, to discriminate movies directed by famous or not famous directors.
 
 #### Studio's fame
-=> Blanche
+[Most important movie production compagnies of all times](https://en.wikipedia.org/wiki/Major_film_studios#:~:text=Today%2C%20the%20Big%20Five%20majors,to%20afford%20to%20watch%20films) A list of famous movie studios was designed to discrimate movies produced by famous or not famous studios. The information of the studio production of each movie was found on the [additionnal dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset).
 
 ## Methods
 ### NLP analysis
