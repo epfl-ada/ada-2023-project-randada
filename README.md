@@ -81,9 +81,8 @@ Finally, we generate lexical fields for each movie genre using generative AI. Th
 
 
 ### Machine Learning
-Use Machine Learning to predict the movie genres using its title (for titles with more than 2 words). 
-
-Random forest => Aurèle
+We use a Random Forest Regressor (same as a Random Forest classifier but for continous data) to predict the sucess of movies using the features extracted from the title. We train it on a part of our dataset, and test it on the rest of the dataset and also on other movies realeased after 2012. We use the mean suqarred error as a way to assess how well does our model preform.
+We also extract the imortance of the features to compare which one is more important.
 
 ## Project timeline
 
