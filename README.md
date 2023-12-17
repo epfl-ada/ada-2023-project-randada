@@ -73,11 +73,12 @@ The link between the pre-processed CMU and Full MovieLens datasets is made using
 
 ## Methods
 ### NLP analysis
-Use natural language processing techniques to extract keywords, entities (NER) and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
+We use natural language processing techniques to extract keywords, entities (NER), part-of-speech and topics from movie titles. Cluster movies based on similar title characteristics to identify patterns in successful movie titles.
 
-Apply sentiment analysis to movie titles to determine the emotional tone conveyed by titles. Explore whether positive or negative sentiment in titles is associated with box office performance.
+We apply sentiment analysis to movie titles to determine the emotional tone conveyed by titles. Furthermore, we explore whether positive or negative sentiment in titles is associated with box office performance.
 
-Genre lexical fields => Clarisse
+Finally, we generate lexical fields for each movie genre using generative AI. The lexical fields are completed with processing of the corpus summaries from which we substracted Nouns and Organization named entities. This lexical fields are used to implement genre prediction of titles.
+
 
 ### Machine Learning
 Use Machine Learning to predict the movie genres using its title (for titles with more than 2 words). 
