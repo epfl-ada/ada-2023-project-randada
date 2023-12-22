@@ -29,7 +29,6 @@ What is the influence of the presence of a protagonist name in the title?
 ### Movie genre
 Is movie title length linked to its genre?
 Are they specific lexical fields according to movie genre?
-Can we correlate the sentiment analysis of the title with the one of the full movie summary?
 
 ## Datasets
 ### CMU Movie Summary Corpus dataset
